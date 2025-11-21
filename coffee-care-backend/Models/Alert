@@ -1,0 +1,25 @@
+const mongoose = require('mongoose');
+
+// Define alert schema
+const alertSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
+  coop: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Coop', // Reference to a coop
+    required: true
+  },
+  read: {
+    type: Boolean,
+    default: false
+  }
+}, { timestamps: true });
+
+// Export the model
+module.exports = mongoose.model('Alert', alertSchema);

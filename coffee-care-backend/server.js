@@ -6,7 +6,7 @@ require('dotenv').config();
 
 // Models
 const Farmer = require('./models/Farmer');
-const Coop = require('./models/Coop');
+
 const Listing = require('./models/Listing');
 const Alert = require('./models/Alert');
 
